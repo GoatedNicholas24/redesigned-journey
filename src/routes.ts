@@ -1,0 +1,16 @@
+import { Router } from 'express';
+import catalog from './modules/catalog/controller.js';
+import products from './modules/products/controller.js';
+import orders from './modules/orders/controller.js';
+import notifications from './modules/notifications/controller.js';
+import settings from './modules/settings/controller.js';
+
+const router = Router();
+
+router.use('/catalog', catalog);
+router.use('/products', products);
+router.use('/orders', orders);
+router.use('/notifications', notifications);
+router.use('/settings', settings);
+
+export default router;
